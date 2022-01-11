@@ -39,7 +39,7 @@ z-index:1;
 const BLOG = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
-top: 50%;
+top: 30%;
 right: calc(1rem + 2vw);
 transform: rotate(90deg) translate(-50%, -50%);
 text-decoration: none;
@@ -49,7 +49,7 @@ const WORK = styled(NavLink)`
 color: ${props => props.click ? props.theme.body : props.theme.text};
 
 position: absolute;
-top: 50%;
+top: 30%;
 left: calc(1rem + 2vw);
 transform: translate(-50%, -50%) rotate(-90deg) ;
 text-decoration: none;
@@ -145,7 +145,7 @@ const Main = () => {
                 <span>click here</span>
             </Center>
 
-            <Contact target="_blank" to={{pathname:"mailto:codebucks27@gmail.com"}}>
+            <Contact target="_blank" to={{pathname:"mailto:kuma1995dev@gmail.com"}}>
                 <motion.h2
                 initial={{
                     y:-200,
@@ -159,7 +159,7 @@ const Main = () => {
                 whileTap={{scale: 0.9}}
                 
                 >
-                    Say hi..
+                    Greeting...
                 </motion.h2>
             </Contact>
             <BLOG to="/blog">

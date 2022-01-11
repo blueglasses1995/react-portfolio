@@ -4,8 +4,8 @@ import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg"
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons  from '../subComponents/SocialIcons'
 import PowerButton  from '../subComponents/PowerButton'
+import ContentfulConfig from "../contentfulConfig"
 
-import {Blogs} from '../data/BlogData';
 import BlogComponent from './BlogComponent'
 import AnchorComponent from '../subComponents/Anchor'
 import BigTitle from "../subComponents/BigTitlte"
@@ -23,7 +23,6 @@ const Container = styled.div`
 background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`};
 width: 100%;
 height:auto;
-
 position: relative;
 padding-bottom: 5rem;
 `
@@ -59,12 +58,18 @@ const container = {
 const BlogPage = () => {
 
     const [numbers, setNumbers] = useState(0);
+    const [posts, setPosts] = useState();
 
     useEffect(() => {
         let num = (window.innerHeight - 70)/30;
         setNumbers(parseInt(num));
-    }, [])
 
+        ContentfulConfig.getEntries({content_type: 'post'})
+        .then((response)=>{
+            setPosts(response.items)
+          })
+          .catch(console.error)
+    }, [])
 
     return (
         <MainContainer
@@ -82,10 +87,10 @@ const BlogPage = () => {
                 <AnchorComponent number={numbers}/>
 <Center>
 <Grid>
-
-{
-    Blogs.map(blog => {
-        return <BlogComponent key={blog.id} blog={blog} />
+{ 
+    (posts !== (null || undefined)) &&
+    posts.map(post => {
+        return <BlogComponent key={post.fields.id} post={post.fields} />
     })
 }
 </Grid>

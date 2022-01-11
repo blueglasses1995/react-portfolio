@@ -74,21 +74,18 @@ export const Facebook = (props) => {
       )
 }
 
-export const YouTube = (props) => {
+export const LinkedIn = (props) => {
     return (
         <svg
           aria-hidden="true"
           data-prefix="fab"
-          data-icon="youtube"
-          className="prefix__svg-inline--fa prefix__fa-youtube prefix__fa-w-18"
+          data-icon="linkedin"
+          className="prefix__svg-inline--fa prefix__fa-linkedin prefix__fa-w-16"        
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 576 512"
-          {...props}
-        >
-          <path
-            fill={props.fill}
-            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-          />
+          width="24"
+          viewBox="0 0 24 24"
+          {...props}>
+          <path d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z"/>
         </svg>
       )
 }

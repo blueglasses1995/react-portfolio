@@ -17,6 +17,7 @@ import SoundBar from "./subComponents/SoundBar";
 function App() {
 
   const location = useLocation();
+
   return <>
 
 
@@ -48,4 +49,3 @@ function App() {
 }
 
 export default App
-
